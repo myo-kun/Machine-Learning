@@ -26,6 +26,7 @@ ompiled source #
 *.sql
 *.sqlite
 *.tsv
+*.csv
 
 # OS generated files #
 ######################
