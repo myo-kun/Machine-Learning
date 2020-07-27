@@ -1,4 +1,0 @@
-Hello github!
-This is test data
-My name is Kai
-Testing branch
