@@ -1,0 +1,2 @@
+# Machine Learningの勉強用
+SIGNATEとかKaggleで練習した問題とか、Kaggleについての本とかオライリーの本とかを読んだときに試したコードとかもいれる。
