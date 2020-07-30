@@ -35,3 +35,15 @@ for i, (tr_idx, va_idx) in enumerate(kf.split(train_x)):
             tmp[idx_2] = tr_x.iloc[idx_2].map(target_mean)
 
         tr_x.loc[:, c] = tmp
+
+# Stacking
+
+for c in cat_cols:
+    data_tmp = pd.DataFrame({c: train_x[c], "target": train_y})
+    tmp = np.repeat(np.nan, train_x.shape[0])
+
+    for i, (tr_idx, va_idx) in enumerate(kf.split(train_x)):
+        target_mean = data_tmp.iloc[tr_idx].groupby(c)["target"].mean()
+        tmp[va_idx] = train_x[c].iloc[va_idx].map(target_mean)
+
+    train_x[c] = tmp
